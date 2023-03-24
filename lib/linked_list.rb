@@ -1,6 +1,19 @@
 class LinkedList
-  attr_reader :head
+  attr_accessor :head
   def initialize ()
-    @head = head
+    @head = nil
+  end
+
+  def append(data)
+    @head = Node.new(data)
+    data
+  end
+
+  def count
+
+  end
+
+  def to_string
+
   end
 end
