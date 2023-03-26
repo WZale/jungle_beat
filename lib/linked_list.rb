@@ -9,12 +9,8 @@ class LinkedList
     data
   end
 
-  def next_node
-    
-  end
-
   def count
-    if list.head.next_node == nil
+    if self.head.next_node == nil
       1
     else
       0
@@ -24,12 +20,9 @@ class LinkedList
   def to_string
     list.head.data
   end
-
-  
-
 end
 
-def pseudo_count  
+# def pseudo_count  
   # count needs to return the number 
   # of nodes currently in the linked list
 
@@ -51,4 +44,4 @@ def pseudo_count
         
 
       # until tail
-end
+# end
