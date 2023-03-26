@@ -18,13 +18,18 @@ RSpec.describe LinkedList do
     expect(list.head.data).to eq("doop")
   end
 
-  xit "has a count method" do
+  it "has a count method" do
     list = LinkedList.new
-    list.append("doop")
+
+    expect(list.append("doop")).to eq("doop")
+    
+    expect(list.head).to be_a(Node)
+    expect(list.head.data).to eq("doop")
+    
     expect(list.count).to eq(1)
   end
 
-  xit "has a to_string method" do
+  it "has a to_string method" do
     list = LinkedList.new
     list.append("doop")
     expect(list.to_string).to eq("doop")

@@ -18,7 +18,7 @@ class LinkedList
   end
 
   def to_string
-    list.head.data
+    self.head.data
   end
 end
 
