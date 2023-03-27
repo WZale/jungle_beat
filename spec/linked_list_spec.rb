@@ -19,8 +19,8 @@ RSpec.describe LinkedList do
     expect(list.head.next_node).to eq(nil)
 
     expect(list.append("deep")).to eq("deep")
-    
-    expect(list.head.next_node).to be_a(Node)
+    expect(list.head.data).to eq("doop")
+    expect(list.head.next_node.data).to eq("deep")
   end
 
   it "has a count method" do
