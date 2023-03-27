@@ -38,6 +38,5 @@ RSpec.describe LinkedList do
     list = LinkedList.new
     list.append("doop")
     expect(list.to_string).to eq("doop")
-    require 'pry'; binding.pry
   end
 end
