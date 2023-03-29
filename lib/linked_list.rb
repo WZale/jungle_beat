@@ -24,12 +24,13 @@ class LinkedList
   # then the parameter passed in will become the 
   # head node, Node.new(data)
 
-  # Else, if head is not equal to nil, current_node
+  # Else, if head is not equal to nil, variable current_node
   # is declared to be @head.
   # While loop then executes, stating that while
   # the node following current node is not equal to
   # nil, (meaning that there is still another node after) 
   # then current node is equal to current_node.next_node
+  # (thus traversing the list).
   # While loop ends, and current_node.next_node is then 
   # declared to be a new node.
 
@@ -37,8 +38,37 @@ class LinkedList
   # the user.
 
   def to_string
-    self.head.data
+    node_data = []
+    current_node = @head
+    while current_node != nil
+      node_data << current_node.data
+      current_node = current_node.next_node
+    end
+    node_data.join(" ")
   end
+
+  # to_string method returns data from nodes
+  # in the form of a string
+
+  # This method begins by declaring an empty
+  # array, node_data. Then a variable is declared,
+  # current_node, and it is set equal to the
+  # instance variable @head.
+
+  # Next, a while loop begins, which executes
+  # as long as current_node is not equal to nil
+  # (meaning that the list has not ended).
+
+  # Inside the while loop, the data from current_node
+  # is shoveled into the array node_data, and
+  # current_node is then set to current_node.next_node,
+  # which serves to traverse the list.
+
+  # The while loop ends when the tail of the 
+  # linked list is reached, and then the .join
+  # method is called on the node_data array to 
+  # join the strings together.
+
 
   def count
     counter = 0
